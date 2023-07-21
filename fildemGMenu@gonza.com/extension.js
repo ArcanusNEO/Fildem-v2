@@ -242,6 +242,7 @@ class MenuButton extends PanelMenu.Button {
 
 		this.box = new St.BoxLayout({style_class: 'panel-status-menu-box menubar-button'});
 		this.labelWidget = new St.Label({
+			style_class: 'font-weight: bold',
 			text: this._label,
 			y_align: Clutter.ActorAlign.CENTER,
 			reactive: true
@@ -419,7 +420,7 @@ const MenuBar = class MenuBar {
 				log(`APP MENU BUTTON: ${JSON.stringify(label, CircularObjectValue())}`);
 
 				if (!this._showAppMenuButton) {
-					label.hide();
+					this._appMenuButton.hide();
 				}
 				this._width_offset = width + el.width;
 				//break;
@@ -457,7 +458,7 @@ const MenuBar = class MenuBar {
 
 	_restoreLabel() {
 		if (this._appMenuButton) {
-			this._appMenuButton._label.show();
+			this._appMenuButton.show();
 		}
 	}
 
