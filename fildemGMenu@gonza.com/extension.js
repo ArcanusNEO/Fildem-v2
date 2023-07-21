@@ -242,7 +242,7 @@ class MenuButton extends PanelMenu.Button {
 
 		this.box = new St.BoxLayout({style_class: 'panel-status-menu-box menubar-button'});
 		this.labelWidget = new St.Label({
-			style_class: 'font-weight: bold',
+			style: 'font-weight: bold',
 			text: this._label,
 			y_align: Clutter.ActorAlign.CENTER,
 			reactive: true
